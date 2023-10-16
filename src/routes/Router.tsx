@@ -10,7 +10,7 @@ export const Router: any = () => {
         <Routes>
             <Route
                 element={<Home/>}
-                path='/minicurso-web-deploy'
+                path='/minicurso-web-deploy*'
             />
         </Routes>
     )

@@ -1,7 +1,7 @@
 import {useAuth} from "@/provider/Auth";
 
 export function Home() {
-    const styles= `
+    const style= `
         w-full
         h-full
         flex
