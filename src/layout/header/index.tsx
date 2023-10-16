@@ -25,7 +25,7 @@ export function Header() {
             label: 'Configurações',
             icon: <CiSettings size={20} className='mr-2'/>,
             command() {
-                navigation(RoutersPathName.GestaoInformacoesPessoais)
+
             },
         },
         {

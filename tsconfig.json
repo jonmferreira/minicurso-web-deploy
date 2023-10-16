@@ -39,8 +39,7 @@
         "noFallthroughCasesInSwitch": true,
         "types": [
             "node",
-            "jest",
-            "@testing-library/jest-dom"
+            "jest"
         ],
         "composite": true,
         "resolveJsonModule": true,
