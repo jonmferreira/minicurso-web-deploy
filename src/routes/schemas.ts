@@ -1,5 +1,5 @@
 export enum RoutersPathName {
-    Login = '/login',
-    Home = '/Home',
+    Login = 'minicurso-web-deploy/login',
+    Home = 'minicurso-web-deploy/Home',
 }
 
