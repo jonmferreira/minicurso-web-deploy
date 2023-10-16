@@ -11,7 +11,9 @@
     "build-image-docker": "docker build -t frontend .",
     "run-image-docker": "docker run -d --rm -p 8081:8081 --name frontend frontend",
     "test": "jest",
-    "testv": "vitest"
+    "testv": "vitest",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   },
   "engines": {
     "node": "18.16.0",
@@ -61,7 +63,8 @@
     "ts-jest": "29.1.1",
     "typescript": "5.0.4",
     "vite": "4.3.9",
-    "vitest": "0.34.2"
+    "vitest": "0.34.2",
+    "gh-pages": "^6.0.0"
   },
   "jest": {
     "testEnvironment": "jsdom",
