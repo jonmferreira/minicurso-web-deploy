@@ -16,9 +16,9 @@ export const Router: any = () => {
             <Route
                 path="/"
                 element={
-                    <RequireAuth>
                         <Layout/>
-                    </RequireAuth>
+                    // <RequireAuth>
+                    // </RequireAuth>
                 }
             >
                 <Route
