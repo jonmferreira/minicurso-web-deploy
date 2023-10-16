@@ -9,8 +9,9 @@ import {Toast} from "primereact/toast";
 import {EtapaLogin} from "@pages/general/Login";
 import {InputText} from "primereact/inputtext";
 import {classNames} from "primereact/utils";
-import {iconProjetoBase} from "@/util/styles";
-// import {useNavigate} from "react-router-dom";
+import {iconProjetoBase, logoUEA} from "@/util/styles";
+import {useNavigate} from "react-router-dom";
+import {RoutersPathName} from "@/routes/schemas.ts";
 
 
 type LoginFormInputs = Z.infer<typeof loginFormSchema>
@@ -26,8 +27,7 @@ const defaultValues = {
 
 // @ts-ignore
 export function FormLogin({setEtapaLogin}) {
-    // const navigate = useNavigate();
-    // const from = "/"// location.state?.from?.pathname || "/";
+    const navigate = useNavigate();
     const {
         control,
         register,
@@ -41,6 +41,17 @@ export function FormLogin({setEtapaLogin}) {
     const [loading, setLoading] = useState<boolean>(false);
     const [timeForFreeClick, setTimeForFreeClick] = useState(0);
     const {signin, estaLogado} = useAuth();
+
+    const tratarError = async (e:any) => {
+        const audioErro = new Audio('../../src/audio/somErroLogin.mp3')
+        await audioErro.play()
+        setTimeout(() => {
+            setLoading(false);
+        }, timeForFreeClick)
+        showErrorLogin(e.message);
+        setTimeForFreeClick(timeForFreeClick + 200)
+    };
+
     const showErrorLogin = useCallback((message: string) => {
         toast.current?.show({
             severity: 'error',
@@ -49,29 +60,19 @@ export function FormLogin({setEtapaLogin}) {
             sticky: true
         });
     }, [toast])
+
     const limparErro = useCallback(() => {
         toast.current?.clear();
     }, [toast])
+
     const handleLogin = useMemo(() => {
         return (data: LoginFormInputs) => {
             if (!estaLogado && !loading) {
                 setLoading(true);
                 limparErro();
-                const user = {
-                    username: data.username,
-                    password: data.password
-                }
-                signin(user).then(() => {
-                    setLoading(false);
-                }).catch(async (e) => {
-                    const audioErro = new Audio('../../src/audio/somErroLogin.mp3')
-                    await audioErro.play()
-                    setTimeout(() => {
-                        setLoading(false);
-                    }, timeForFreeClick)
-                    showErrorLogin(e.message);
-                    setTimeForFreeClick(timeForFreeClick + 200)
-                });
+                setTimeout(()=> {
+                    navigate(RoutersPathName.Home)
+                }, 300)
             }
         }
     }, [
@@ -85,6 +86,7 @@ export function FormLogin({setEtapaLogin}) {
     const showBtnEntrar = useMemo(() => {
         if (estaLogado) {
             setTimeout(() => {
+
                 setEtapaLogin(EtapaLogin.ESCOLHAPERFIL)
             }, 400)
             return <Button
@@ -111,8 +113,7 @@ export function FormLogin({setEtapaLogin}) {
         }
     }, [estaLogado, loading, setEtapaLogin])
 
-    // @ts-ignore
-    const getFormErrorMessage = (name) => {
+    const getFormErrorMessage = (name:string) => {
         // @ts-ignore
         return errors[name] ? <small className="p-error">{errors[name].message}</small> :
             <small className="p-error">&nbsp;</small>;
@@ -122,7 +123,7 @@ export function FormLogin({setEtapaLogin}) {
         <div className={styleCardLoginForm}>
             <Toast ref={toast} position="bottom-center"/>
             <img
-                src={iconProjetoBase}
+                src={logoUEA}
                 className={styleImg}
                 alt="Logo no login"/>
             <form

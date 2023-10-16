@@ -15,10 +15,10 @@ export const styleLogoApresentacao = "" +
     "scalein " +
     "animation-duration-100 ";
 export const styleImg = `
-    sm:h-16rem 
-    md:h-15rem 
-    lg:h-16rem 
-        xl:h-20rem 
+    sm:h-8rem 
+    md:h-8rem 
+    lg:h-8rem 
+        xl:h-8rem 
     h-16rem 
     p-2`
 export const styleForm = `

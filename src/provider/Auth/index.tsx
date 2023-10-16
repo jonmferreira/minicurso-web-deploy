@@ -75,13 +75,20 @@ export const AuthProvider = ({children}: { children: React.ReactNode }) => {
     }
 
     const signin = async (user: Login): Promise<void> => {
-        const userResponse = await LoginAPI.logar(user)
-        if (!userResponse) {
-            throw "Error ao logar"
+        try {
+            const userResponse = await LoginAPI.logar(user)
+            if (!userResponse) {
+                throw "Error ao logar"
+            }
+            const {data} = userResponse
+            setUser(data);
+        } catch (e){
+            //TODO remover tratativa try catch
+            setUser({access:'asdasd',email:'',groups:[], permissions:[],refresh:''})
         }
-        const {data} = userResponse
+
         // @ts-ignore
-        setUser(data);
+
     };
 
     const signout = () => {
@@ -126,15 +133,17 @@ export const RequireAuth = ({children}: { children: JSX.Element }) => {
     const {estaLogado} = useAuth();
     const location = useLocation();
 
-    if (!estaLogado) {
-        return (
-            <Navigate
-                to={RoutersPathName.Login}
-                state={{from: location}}
-                replace
-            />
-        )
-    }
+
+    //TODO remover para garantir validação de login de usuário
+    // if (!estaLogado) {
+    //     return (
+    //         <Navigate
+    //             to={RoutersPathName.Login}
+    //             state={{from: location}}
+    //             replace
+    //         />
+    //     )
+    // }
     if (location.pathname == '/') {
         return (
             <Navigate
