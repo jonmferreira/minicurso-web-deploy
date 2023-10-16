@@ -19,8 +19,20 @@ export function Home() {
     return (
         <div className={`w-full h-screen flex flex-row m-2 p-4`}>
             <div className={style}>
-
-                
+            <div class="flex flex-column">
+            <div class="flex justify-content-between flex-wrap">
+                <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary 
+                font-bold border-round m-2">1</div>
+                <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary 
+                font-bold border-round m-2">2</div>
+            </div>
+                <div class="flex flex-row flex-wrap">
+                    <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">1</div>
+                    <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">2</div>
+                    <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">3</div>
+                </div>
+                <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">3</div>
+            </div>
 
             </div>
             
