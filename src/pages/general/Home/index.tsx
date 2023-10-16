@@ -19,10 +19,9 @@ export function Home() {
     return (
         <div className={`w-full h-screen flex flex-row m-2 p-4`}>
             <div className={style}>
-
             </div>
-            <div className={style}></div>
+            <div className={style}>
+            </div>
         </div>
     )
 }
-
