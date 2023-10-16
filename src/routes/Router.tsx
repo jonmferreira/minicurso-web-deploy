@@ -10,24 +10,9 @@ export const Router: any = () => {
         <Routes>
 
             <Route
-                path={'/'}
+                path={'/minicurso-web-deploy*'}
                 element={<Home/>}
             />
-
-            <Route
-                path='/minicurso-web-deploy*'
-            >
-                <Route
-                    path={RoutersPathName.Home}
-                    element={<Home/>}
-                />
-
-                <Route
-                    path={RoutersPathName.Login}
-                    element={<Login/>}
-                />
-
-            </Route>
 
         </Routes>
     )
