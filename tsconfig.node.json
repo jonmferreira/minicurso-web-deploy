@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": ["src/*"],
+            "@testes/*": ["testes/*"],
+            "@pages/*": ["src/pages/*"],
+            "@infra/*": ["src/infra/*"],
+            "@store/*": ["src/store/*"]
+        },
+        "composite": true,
+        "skipLibCheck": true,
+        "module": "ESNext",
+        "moduleResolution": "bundler",
+        "allowSyntheticDefaultImports": true,
+        "types": ["node", "jest", "@testing-library/jest-dom"]
+    },
+    "include": ["vite.config.ts"]
+}

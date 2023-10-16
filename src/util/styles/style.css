@@ -1,0 +1,39 @@
+.bg-custom {
+    background-color: var(--blue-color)
+}
+
+.bg-gradiente-maximum-compatibility {
+    background: rgb(32,164,222);
+    background: -moz-linear-gradient(90deg, rgba(32,164,222,1) 16%, rgba(6,121,178,1) 50%, rgba(1,73,131,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(32,164,222,1) 16%, rgba(6,121,178,1) 50%, rgba(1,73,131,1) 100%);
+    background: linear-gradient(90deg, rgba(32,164,222,1) 0%, rgba(6,121,178,1) 20%, rgba(1,73,131,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20a4de",endColorstr="#014983",GradientType=1);
+}
+
+.bg-gradiente-maximum-compatibility-reverse {
+    background: rgb(32,164,222);
+    background: -moz-linear-gradient(90deg, rgba(1,73,131,1) 16%, rgba(6,121,178,1) 50%, rgba(32,164,222,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(1,73,131,1) 16%, rgba(6,121,178,1) 50%, rgba(32,164,222,1) 100%);
+    background: linear-gradient(90deg, rgba(1,73,131,1) 0%, rgba(6,121,178,1) 20%, rgba(32,164,222,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20a4de",endColorstr="#014983",GradientType=1);
+}
+
+.bg-gradiente-maximum-compatibility-espelhado {
+    background: rgb(32,164,222);
+    background: -moz-linear-gradient(90deg, rgba(1,73,131,1) 16%, rgba(6,121,178,1) 50%, rgba(1,73,131,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(1,73,131,1) 16%, rgba(6,121,178,1) 50%, rgba(1,73,131,1) 100%);
+    background: linear-gradient(90deg, rgba(1,73,131,1) 0%, rgba(6,121,178,1) 20%, rgba(1,73,131,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20a4de",endColorstr="#014983",GradientType=1);
+}
+
+.p-dataview .p-dataview-content {
+    background: transparent;
+}
+
+.p-dataview.p-dataview-list .p-dataview-content > .p-grid > div {
+    border: none;
+}
+
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a:focus {
+    box-shadow: none;
+}

@@ -1,0 +1,57 @@
+.header-style {
+    background-color: #014983FF !important;
+}
+.p-button.p-button-icon-only {
+    padding: 0 !important;
+}
+
+.logoHome {
+    height: 32px !important;
+}
+
+.IconToolbar {
+    width: 32px !important;
+    height: 32px !important;
+}
+#header-sub-menu {
+    font-weight: 500 !important;
+    color: #495057;
+    line-height: 1;
+    border: 0;
+    width: 100%;
+    border-radius: 0;
+    outline: none;
+}
+#header-sub-menu:hover {
+    background: #e9ecef;
+ }
+
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend:hover {
+    background: rgb(32,164,222);
+    border-color: rgb(32,164,222);
+    color: #ffffff !important;
+}
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend:hover {
+    background: #014983FF;
+    border-color:  rgb(32,164,222);
+    color: #ffffff !important;
+}
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a {
+    color: #ffffff !important;
+}
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend a:hover {
+
+    color: #ffffff !important;
+}
+
+.p-fieldset .p-fieldset-legend {
+    padding: 1.25rem;
+    border: 1px solid #dee2e6;
+    color: #ffffff !important;
+    background: linear-gradient(90deg, rgba(32,164,222,1) 16%, rgba(6,121,178,1) 50%, rgba(1,73,131,1) 100%);
+    font-weight: 900;
+}
+.p-fieldset.p-fieldset-toggleable .p-fieldset-legend {
+    padding: 0;
+    transition: none !important;
+}

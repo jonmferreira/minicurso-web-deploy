@@ -1,0 +1,100 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  background-color: rgba(245, 245, 245, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+    padding: 0 !important;
+
+}
+.bg-gradiente-maximum-compatibility {
+  background: rgb(32,164,222);
+  background: -moz-linear-gradient(90deg, rgba(32,164,222,1) 16%, rgba(6,121,178,1) 50%, rgba(1,73,131,1) 100%);
+  background: -webkit-linear-gradient(90deg, rgba(32,164,222,1) 16%, rgba(6,121,178,1) 50%, rgba(1,73,131,1) 100%);
+  background: linear-gradient(90deg, rgba(32,164,222,1) 16%, rgba(6,121,178,1) 50%, rgba(1,73,131,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#20a4de",endColorstr="#014983",GradientType=1);
+}
+
+body .ui-clock {
+    white-space: nowrap;
+}
+
+input::-webkit-datetime-edit {
+ color: #777 !important;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+*::-webkit-scrollbar {
+  width: 8px;               /* width of the entire scrollbar */
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ccc;    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+
+body {
+  font-family: var(--font-family);
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+
+}
+input[type=number] {
+ -moz-appearance: textfield;
+ appearance: textfield;
+}
+
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr.p-row-odd {
+    background: #004c47d1 !important;;
+    color: white !important;
+}
+.p-datatable.p-datatable-striped .p-datatable-tbody > tr.p-row-odd:hover {
+    background: #098da8 !important;;
+    color: white !important;
+}

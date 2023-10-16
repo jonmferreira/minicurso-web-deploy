@@ -1,0 +1,60 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "paths": {
+            "@/*": [
+                "src/*"
+            ],
+            "@pages/*": [
+                "src/pages/*"
+            ],
+            "@infra/*": [
+                "src/infra/*"
+            ],
+            "@testes/*": [
+                "testes/*"
+            ],
+            "@store/*": [
+                "store/*"
+            ]
+        },
+        "target": "ESNext",
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        "module": "ESNext",
+        "skipLibCheck": true,
+        /* Bundler mode */
+        "moduleResolution": "bundler",
+        "allowImportingTsExtensions": true,
+        "isolatedModules": true,
+        "noEmit": true,
+        "jsx": "react-jsx",
+        /* Linting */
+        "strict": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "noFallthroughCasesInSwitch": true,
+        "types": [
+            "node",
+            "jest",
+            "@testing-library/jest-dom"
+        ],
+        "composite": true,
+        "resolveJsonModule": true,
+        "esModuleInterop": true
+    },
+    "references": [
+        {
+            "path": "./tsconfig.node.json"
+        }
+    ],
+    "include": [
+        "src",
+        "./vite.config.ts",
+        "src/**/*.json",
+        "testes"
+    ]
+}
