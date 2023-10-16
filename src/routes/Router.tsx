@@ -9,21 +9,9 @@ export const Router: any = () => {
     return (
         <Routes>
             <Route
-                path={'/'}
                 element={<Home/>}
+                path='/minicurso-web-deploy'
             />
-
-            <Route
-                path="/minicurso-web-deploy">
-                <Route
-                    path={RoutersPathName.Home}
-                    element={<Home/>}
-                />
-                <Route
-                    path={RoutersPathName.Login}
-                    element={<Login/>}
-                />
-            </Route>
         </Routes>
     )
 }
