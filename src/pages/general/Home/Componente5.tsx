@@ -4,22 +4,11 @@ import { Slider, SliderChangeEvent } from "primereact/slider";
 import { InputText } from 'primereact/inputtext';
 import { Button } from 'primereact/button';
 import { Knob, KnobChangeEvent } from 'primereact/knob';
-
-
-import {style} from "@pages/general/Home/index.tsx";
-import { Button } from "primereact/button";
-import { InputText } from "primereact/inputtext";
-
-import { Knob, KnobChangeEvent  } from 'primereact/knob';
-        
-import { Slider, SliderChangeEvent  } from 'primereact/slider';
-import { useState } from "react";
         
 export const Componente5 = () => {
     const [sliderValue, setSliderValue] = useState<number>(0);
     const [knobValue, setKnobValue] = useState<number>(30);
     const [value, setValue] = useState<number>(50)
-    const [Knobvalue, setKnobValue] = useState<number>(0)
 
     return <div className={`w-full h-screen flex flex-row m-2 p-4`}>
         <div className={style}>
@@ -71,7 +60,7 @@ export const Componente5 = () => {
 
             <h3>Knob</h3>
             <Knob
-            value={Knobvalue}
+            value={knobValue}
             onChange={(e: KnobChangeEvent) => setKnobValue(e.value)} />
             <br />
 
