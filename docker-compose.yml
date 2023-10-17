@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  frontend-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+      - /app/node_modules
+    environment:
+      - WDS_SOCKET_HOST=127.0.0.1 
+      - CHOKIDAR_USEPOLLING=true
+      - WATCHPACK_POLLING=true 
+    ports:
+      - 8081:8081
+    command: npm run dev
