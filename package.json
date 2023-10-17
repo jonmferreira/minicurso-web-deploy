@@ -2,7 +2,7 @@
   "name": "projeto-base",
   "private": true,
   "version": "0.0.1",
-  "homepage": "https://gabisteph.github.io/minicurso-web-deploy/",
+  "homepage": "https://jonmferreira.github.io/minicurso-web-deploy/",
   "type": "module",
   "scripts": {
     "dev": "vite --host --port 8081",
