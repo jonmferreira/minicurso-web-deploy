@@ -5,7 +5,8 @@ import {AuthProvider} from "@/provider/Auth";
 
 export default function App() {
     return (
-        <AuthProvider>
+        //@ts-ignore
+        <AuthProvider children={undefined}>
             <BrowserRouter>
                 <Router/>
             </BrowserRouter>
