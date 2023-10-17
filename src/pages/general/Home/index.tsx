@@ -31,7 +31,7 @@ export function Home() {
                     <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">2</div>
                     <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">3</div>
                 </div>
-                <div class="flex justify-content-between flex-wrap">3</div>
+                <div class="flex align-items-center justify-content-center w-4rem h-4rem bg-primary font-bold border-round m-2">3</div>
             </div>
 
             </div>

@@ -2,12 +2,12 @@ FROM node:18-bullseye
 
 WORKDIR /app/
 
-COPY ./frontend/package*.json ./
+COPY ./package*.json ./
 
 RUN npm cache clean --force
 RUN npm install
 
-COPY ./frontend/ ./
+COPY ./ ./
 
 EXPOSE 8081
 
