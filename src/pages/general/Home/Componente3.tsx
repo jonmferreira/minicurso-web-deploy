@@ -1,13 +1,58 @@
 import {style} from "@pages/general/Home/index.tsx";
+import { InputText } from 'primereact/inputtext';
+import { Slider } from 'primereact/slider';
+import { Knob } from 'primereact/knob';
+import { Button } from 'primereact/button';
 
-export const Componente2 = ()=> {
-return <div className={`w-full h-screen flex flex-row m-2 p-4`}>
+import { useState } from "react";
 
-    <div className={style}>
-        A
+export const Componente3 = ()=> {
+
+    const [valueText, setValueText] = useState()
+    const [valueSlider, setValueSlider] = useState()
+    const [valueKnob, setValueKnob] = useState(0)
+
+    // const {lista, setList} = useComponente1Store()
+
+
+
+    return <div className={`w-full h-screen flex flex-row m-2 p-4`}>
+
+        <div className={style}>
+            A
+        </div>
+        <div className={style}>
+            <div className="flex flex-row flex-wrap">
+                <div className="flex flex-column">
+                    <h3>InputText</h3>
+                    <span className="p-input-icon-left">
+                        <i className="pi pi-search" />
+                        <InputText placeholder="Search" value={valueText} onChange={(e) => {
+                            setValueText(e.target.value)
+                        }}/>
+                    </span>
+                    <h3>Slider</h3>
+                    <Slider value={valueSlider} onChange = {(e) => {
+                        //
+                        setValueSlider(e.value)
+                    }}/>
+                    <h3>Knob</h3>
+                    <Knob value={valueKnob} onChange = {(e) => {
+                        //
+                        setValueKnob(e.value)
+                    }}/>
+                </div>
+                <div>
+                    <h3>button</h3>
+                    <Button icon="pi pi-check" rounded aria-label="Filter" />
+                </div>
+
+            </div>
+            
+        </div>
     </div>
-    <div className={style}>
-        B
-    </div>
-</div>
 }
+function useComponente1Store(): { lista: any; setList: any; } {
+    throw new Error("Function not implemented.");
+}
+
