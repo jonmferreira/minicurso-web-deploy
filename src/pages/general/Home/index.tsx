@@ -1,6 +1,7 @@
 import {useAuth} from "@/provider/Auth";
 import {Componente1} from "@pages/general/Home/Componente1.tsx";
 import React from "react";
+import {Componente3} from "@pages/general/Home/Componente3.tsx";
 import {Componente7} from "@pages/general/Home/Componente7.tsx";
 import {Componente6} from "@pages/general/Home/Componente6.tsx";
 import {Componente5} from "@pages/general/Home/Componente5.tsx";
@@ -22,9 +23,9 @@ export const style = `
             align-items-center   
     `
 
-function Componente3() {
-    return null;
-}
+//function Componente3() {
+//    return null;
+//}
 
 export function Home() {
     const {perfil} = useAuth();
