@@ -1,8 +1,14 @@
 import {useAuth} from "@/provider/Auth";
+import {Componente1} from "@pages/general/Home/Componente1.tsx";
+import React from "react";
+import {Componente7} from "@pages/general/Home/Componente7.tsx";
+import {Componente6} from "@pages/general/Home/Componente6.tsx";
+import {Componente5} from "@pages/general/Home/Componente5.tsx";
+import {Componente4} from "@pages/general/Home/Componente4.tsx";
+import {Componente2} from "@pages/general/Home/Componente2.tsx";
+import {Componente8} from "@pages/general/Home/Componente8.tsx";
 
-export function Home() {
-    const {perfil} = useAuth();
-    const style = `
+export const style = `
             w-full
             h-full
             flex
@@ -16,14 +22,25 @@ export function Home() {
             align-items-center   
     `
 
+function Componente3() {
+    return null;
+}
+
+export function Home() {
+    const {perfil} = useAuth();
+
+
     return (
-        <div className={`w-full h-screen flex flex-row m-2 p-4`}>
-            <div className={style}>
+        <div className={`w-full h-screen flex flex-column m-0 p-0`}>
+            <Componente1/>
+            <Componente2/>
+            <Componente3/>
+            <Componente4/>
+            <Componente5/>
+            <Componente6/>
+            <Componente7/>
+            <Componente8/>
 
-            </div>
-            <div className={style}>
-
-            </div>
         </div>
     )
 }
