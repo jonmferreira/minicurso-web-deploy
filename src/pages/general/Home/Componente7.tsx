@@ -1,15 +1,6 @@
 import {style} from "@pages/general/Home/index.tsx";
-import { InputTextarea } from 'primereact/inputtextarea';
-import { Knob } from 'primereact/knob';
-import { Slider } from 'primereact/slider';
-import { Button } from 'primereact/button';
-import React, {useState} from 'react';
-        
-export const Componente7 = () => {
-    const [value, setValue] = useState('');
-    const [value1, setValue1] = useState(0);
-    const [value2, setValue2] = useState(0);
 
+export const Componente7 = () => {
     return <div className={`w-full h-screen flex flex-row m-2 p-4`}>
 
         <div className={style}>
@@ -24,6 +15,7 @@ export const Componente7 = () => {
             </div>
         </div>
         <div className={style}>
+            B
         </div>
     </div>
 }
