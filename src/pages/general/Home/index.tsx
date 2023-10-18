@@ -23,9 +23,9 @@ export const style = `
             align-items-center   
     `
 
-/*function Componente3() {
-    return null;
-} */
+//function Componente3() {
+//    return null;
+//}
 
 export function Home() {
     const {perfil} = useAuth();
