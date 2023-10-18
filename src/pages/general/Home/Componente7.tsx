@@ -1,7 +1,9 @@
 import {style} from "@pages/general/Home/index.tsx";
+
 import { InputTextarea } from 'primereact/inputtextarea';
 import { Button } from 'primereact/button';
 import React, {useState} from 'react';
+
 import { Slider, SliderChangeEvent } from "primereact/slider";
 import { AutoComplete, AutoCompleteCompleteEvent } from 'primereact/autocomplete';
 import { Knob, KnobChangeEvent } from 'primereact/knob';
@@ -10,6 +12,7 @@ export const Componente7 = () => {
     const [value, setValue] = useState('');
     const [value1, setValue1] = useState(0);
     const [value2, setValue2] = useState(0);
+        
     const [box, setBox] = useState(0);
     const [knob, setKnob] = useState(0);
 
@@ -17,7 +20,7 @@ export const Componente7 = () => {
     const search = (event: AutoCompleteCompleteEvent) => {
         setItems([...Array(10).keys()].map(item => event.query + '-' + item));
     }
-    
+      
     return <div className={`w-full h-screen flex flex-row m-2 p-4`}>
 
         <div className={style}>
