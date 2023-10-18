@@ -24,7 +24,10 @@ export const Componente2 = ()=> {
         <div className="flex-auto">
             <label htmlFor="locale-us"
                 className="font-bold block mb-2">
-                    <Slider value={value} onChange={(e) => setValue(e.value)} />
+                    <Slider value={value} onChange={(e) => {
+                        //@ts-ignore
+                        setValue(e.value)}}/>
+
             </label>
         </div>
 

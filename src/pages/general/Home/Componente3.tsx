@@ -31,8 +31,12 @@ export const Componente3 = ()=> {
                 <h3>
                     Slider
                 </h3>
-                <InputText value={valueText} onChange={(e) => setValueText(e.target.value)} />
-                <Slider value={valueSlider} onChange={(e) => setValueSlider(e.value)} />
+                <InputText value={valueText} onChange={(e) => {
+                    //@ts-ignore
+                    setValueText(e.target.value)}} />
+                <Slider value={valueSlider} onChange={(e) => {
+                    //@ts-ignore
+                    setValueSlider(e.value)}} />
                 <h3>
                     Knob
                 </h3>

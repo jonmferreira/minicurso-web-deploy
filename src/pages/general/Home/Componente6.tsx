@@ -17,7 +17,9 @@ export const Componente6 = () => {
         <div className={style}>
             <div className="card flex flex-column justify-content-around w-full">
                 <InputText value={value} onChange={(e) => setValue(e.target.value)} className='w-14rem m-2'/>
-                <Slider value={value2} onChange={(e) => setValue2(e.value)} className="w-14rem" />
+                <Slider value={value2} onChange={(e) => {
+                    //@ts-ignore
+                    setValue2(e.value)}} className="w-14rem" />
                 <Knob value={value3} onChange={(e) => setValue3(e.value)} className="w-14rem m-2"/>
             </div>
             <div>            
